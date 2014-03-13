@@ -14,7 +14,7 @@
         <p>        
             Use esta área para proporcionar información adicional.
         </p>
-        aaaaaaa
+        
         <p>        
             Use esta área para proporcionar información adicional.
         </p>
