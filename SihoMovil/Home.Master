@@ -1,0 +1,215 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="SihoMovil.Home" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: Scripts.Render("~/bundles/js") %>
+        <%: Styles.Render("~/bundles/css") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference ID="BundleReference1" runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body id="page1">
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery.ui.combined" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="bg1">
+            <div class="bg2">
+                <div class="main">
+                    <!-- header -->
+
+                                        <header>
+                        <h1><a href="~/Default.aspx" id="logo" runat="server">HotelPrincipe</a></h1>
+                        <div class="department">
+                            Fax: +57 22258766
+                            . mail: info@pricipeh.com
+                            . Tuluá - Colombia<br>
+                            <span>PBX: &nbsp; +57 22258111</span>
+                        </div>
+                    </header>
+                    <div class="box">
+                        <nav id="main-menu">
+                            <ul class="menu" id="menu">
+                                <li><a href="index.html">Estructura</a>
+                                    <strong></strong>
+                                    <ul>
+                                        <li><a id="A1" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Empresas</a></li>
+                                        <li><a id="A2" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Centro Operación</a></li>
+                                        <li><a id="A3" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Clientes</a></li>
+                                        <li><a id="A4" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Medio Pago</a></li>
+                                        <li><a id="A5" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Servicios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="services.html">Movimientos</a>
+                                    <strong></strong>
+                                    <ul>
+                                        <li><a id="A6" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Reservas</a></li>
+                                        <li><a id="A7" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Check-In</a></li>
+                                        <li><a id="A8" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Check-Out</a></li>
+                                        <li><a id="A9" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Traslados</a></li>
+                                        <li><a id="A10" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Panel Administrativo</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="booking.html">Venta Servicios</a>
+                                    <strong></strong>
+                                    <ul>
+                                        <li><a id="A11" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Comandas</a></li>
+                                        <li><a id="A12" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Facturación</a></li>
+                                        <li><a id="A13" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Abono a Cuentas</a></li>
+                                        <li><a id="A14" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Estado de Cuenta</a></li>
+                                        <li><a id="A15" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Cargos de Servicios</a></li>
+                                        <li><a id="A16" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Movimientos Diarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="rooms.html">Informes</a>
+                                    <strong></strong>
+                                    <ul>
+                                        <li><a id="A17" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Inteligencia de Negocio</a></li>
+                                        <li><a id="A18" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Informes de Servicios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="locations.html">Configuración</a>
+                                    <strong></strong>
+                                    <ul>
+                                        <li><a id="A19" href="~/Pages/Configuracion/GUI/TipoReserva.aspx" runat="server">Tipos de Reserva</a></li>
+                                        <li><a id="A20" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Tipos Zonas Reserva (Hab/Aud)</a></li>
+                                        <li><a id="A21" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Clase Reserva</a></li>
+                                        <li><a id="A22" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Motivo Reserva</a></li>
+                                        <li><a id="A23" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Estado Reserva</a></li>
+                                        <li><a id="A24" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Estado Zona</a></li>
+                                        <li><a id="A25" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Zona Reserva</a></li>
+                                        <li><a id="A26" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Estado Documento</a></li>
+                                        <li><a id="A27" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Complementario</a></li>
+                                        <li><a id="A28" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Limite Credito</a></li>
+                                        <li><a id="A29" href="~/Pages/Pieza/GUI/Consultas/HojaVidaDispositivo.aspx" runat="server">Metodo Aplicación</a></li>
+                                        <li><a id="A30" href="~/Pages/Pieza/GUI/Consultas/StockRepuestos.aspx" runat="server">Motivo Traslado</a></li>
+                                        <li><a id="A31" href="~/Pages/Pieza/GUI/Procesos/RegistroPieza.aspx" runat="server">Tarifas</a></li>
+                                        <li><a id="A32" href="~/Pages/Pieza/GUI/Consultas/ConsultaPorArea.aspx" runat="server">Planes </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+
+<%--                    <header>
+                        <h1><a href="~/Default.aspx" id="logo" runat="server">LoungeHotel</a></h1>
+                        <div class="department">
+                            Fax: +57 22258766
+                            . mail: info@pricipeh.com
+                            . Tuluá - Colombia<br>
+                            <span>PBX: &nbsp; +57 22258111</span>
+                        </div>
+                    </header>
+                    <div class="box">
+                        <nav id="main-menu">
+                            <ul class="menu" id="menu">
+                                <li><a href="Default.html">Acerca del Hotel</a></li>
+                                <li><a href="services.html">Ubicación</a></li>
+                                <li><a href="booking.html">Habitaciones</a></li>
+                                <li><a href="booking.html">Habitaciones</a></li>
+                                <li><a href="locations.html">Restaurante-Bar</a></li>
+                            </ul>
+                        </nav>--%>
+
+
+                        <!-- header end -->
+                        <!-- content -->
+
+                        <article id="content">
+                            <div class="box1">
+                                <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                                <section class="content-wrapper main-content clear-fix">
+                                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                                </section>
+
+                            </div>
+                            <div class="pad">
+                                <div class="wrapper line3">
+                                    <div class="col2">
+                                        <h2>Welcome to Our Hotel!</h2>
+                                        <p class="pad_bot1">
+                                            <strong class="color2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</strong><br>
+                                            Incididunt ut labore dolore magna. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                        <p class="pad_bot2">Duis aute irure dolorin reprehenderit in voluptate velit esse cillum dolore eu fugiat pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                                        <a href="#" class="button1">Leer Más</a>
+                                    </div>
+                                    <div class="col1 pad_left1">
+                                        <h2>About Us</h2>
+                                        <div class="wrapper">
+                                            <figure class="left marg_right1">
+                                                <img src="images/page1_img1.jpg" alt="">
+                                            </figure>
+                                            <p class="pad_bot1"><strong class="color2">10.10.2011</strong></p>
+                                            <p class="pad_bot2">Lorem ipsum dolor sit amet, consectetur adipisicing elited do eiusmod tempor incididunt.</p>
+                                        </div>
+                                        <a href="#" class="button1">Leer Más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <!--content end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <!-- footer -->
+            <footer>
+                <div class="col2">
+                    <%-- Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved | Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a>--%>
+                    <%-- <nav>
+                        <ul id="footer_menu">
+                            <li class="active"><a href="index.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="rooms.html">Rooms</a></li>
+                            <li class="last"><a href="locations.html">Locations</a></li>
+                        </ul>
+                    </nav>--%>
+                </div>
+                <div class="col1 pad_left1">
+                </div>
+                <div class="footer-text">
+                    SihoMovil - Copyright <%= DateTime.Now.Year %>. - Todos los Derechos Reservados - <a href="http://www.principeh.com">www.principeh.com</a>
+
+                    <br />
+                </div>
+                <!-- {%FOOTER_LINK} -->
+
+            </footer>
+            <!-- footer end -->
+        </div>
+        <script type="text/javascript">Cufon.now();</script>
+       </form>
+</body>
+</html>
+
